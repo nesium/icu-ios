@@ -2,7 +2,8 @@ OUTPUT_PATH=build-universal
 
 mkdir -p "$OUTPUT_PATH"
 
-lipo -create -output "$OUTPUT_PATH/libicudata.a" "build-arm64/lib/libicudata.a" "build-armv7s/lib/libicudata.a" "build-armv7/lib/libicudata.a" "build-i386/lib/libicudata.a" "build-x86_64/lib/libicudata.a"
+# lipo -create -output "$OUTPUT_PATH/libicudata.a" "build-arm64/lib/libicudata.a" "build-armv7s/lib/libicudata.a" "build-armv7/lib/libicudata.a" "build-i386/lib/libicudata.a" "build-x86_64/lib/libicudata.a"
+lipo -create -output "$OUTPUT_PATH/libicudata.a" "build-arm64/stubdata/libicudata.a" "build-armv7s/stubdata/libicudata.a" "build-armv7/stubdata/libicudata.a" "build-i386/stubdata/libicudata.a" "build-x86_64/stubdata/libicudata.a"
 lipo -create -output "$OUTPUT_PATH/libicui18n.a" "build-arm64/lib/libicui18n.a" "build-armv7s/lib/libicui18n.a" "build-armv7/lib/libicui18n.a" "build-i386/lib/libicui18n.a" "build-x86_64/lib/libicui18n.a"
 lipo -create -output "$OUTPUT_PATH/libicuio.a" "build-arm64/lib/libicuio.a" "build-armv7s/lib/libicuio.a" "build-armv7/lib/libicuio.a" "build-i386/lib/libicuio.a" "build-x86_64/lib/libicuio.a"
 lipo -create -output "$OUTPUT_PATH/libicule.a" "build-arm64/lib/libicule.a" "build-armv7s/lib/libicule.a" "build-armv7/lib/libicule.a" "build-i386/lib/libicule.a" "build-x86_64/lib/libicule.a"
