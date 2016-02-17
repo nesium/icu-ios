@@ -12,4 +12,4 @@ mkdir -p build-$ARCH && cd build-$ARCH
 
 [ -e Makefile ] && make distclean
 
-sh $ICU_PATH/source/configure --host=i686-apple-darwin11 --enable-static --disable-shared
+sh $ICU_PATH/source/configure --host=i686-apple-darwin11 --enable-static --disable-shared --with-data-packaging=archive
